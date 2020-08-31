@@ -29,3 +29,15 @@ There are three main reasons:
    <center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN3.png" width="60%"></center>
 
    Therefore, we can use the subsampling concept to shirk the image, reducing the amount of parameters in model.
+
+## The whole CNN structure
+
+The basic structure of CNN is following:
+**Image -> Convolution -> Max Pooling -> Convolution -> Max Pooling -> Flatten -> Fully Connected Network**
+> You can always decide how many Convolution and Max Pooling you wanna do
+
+<center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN4.png" width="60%"></center>
+
+- **The first and second property mentioned above are dealt by Convolution layer!!**
+
+- **The third property mentioned above is dealt by Max Pooling layer!!**
