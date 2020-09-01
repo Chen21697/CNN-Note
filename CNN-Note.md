@@ -87,4 +87,26 @@ What max pooling does is subsampling. If we get a 4\*4 matrix from previous conv
 >Subsampling can make your image even smaller.
 
 ## Correlation between Convolution and Fully Connected
-> filter is a special neuron
+- **Filter is just a special neuron**
+- **Convolution is just removing some parameters from fully connected layer**.
+
+For example, feature map is same as the output of neurons in the hidden layer (the green squares).
+
+<center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN11.png" width="60%"></center>
+
+When we are doing the convolution, we start from putting the filter at the upper left corner of image then do the inner product. Eventually, we will get an output 3. **This process is same as flatten the 6\*6 image and deeming it as the input vector**.
+Then assume you have a red neuron that connected to this input vector. So the output of this neuron is 3.
+
+<center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN12.png" width="60%"></center>
+
+If you follow the colorful line, we will find out that we only use 9 pixels as our input not 36 pixels(whole image) since we mentioned that we don't have to use the whole image for finding a pattern. Therefor that's why we can use less parameters.
+
+> **Each neuron only detects a small region of the whole image!!(important)**
+
+Then when our stride is 1, we move to the right and the inner product we get will be -1 right now. Again, if you follow the colorful line, you'll find out the input of -1 neuron is different.
+
+In the fully connected layer, these two neuron are basically doing different thing because each has its own weight. **However, when we are doing the convolution, we force these two neurons to share the same weight. Although these two are connected to different input, but there weight is the same.** This is called weight share.
+
+When we are doing this, the parameter is even lesser.
+
+<center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN13.png" width="60%"></center>
