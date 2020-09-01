@@ -8,4 +8,3 @@
 - **Why can we discard some parameters?**
 - **The whole CNN structure**
 - **Correlation between Convolution and Fully Connected**
-- **What does CNN learn?**
