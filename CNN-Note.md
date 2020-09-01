@@ -99,14 +99,21 @@ Then assume you have a red neuron that connected to this input vector. So the ou
 
 <center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN12.png" width="60%"></center>
 
-If you follow the colorful line, we will find out that we only use 9 pixels as our input not 36 pixels(whole image) since we mentioned that we don't have to use the whole image for finding a pattern. Therefor that's why we can use less parameters.
+If you follow the colorful line, we will find out that we only use 9 pixels as our input not 36 pixels(whole image) since we mentioned that we don't have to use the whole image for finding a pattern. Therefore, that's why we can use less parameters.
 
 > **Each neuron only detects a small region of the whole image!!(important)**
 
 Then when our stride is 1, we move to the right and the inner product we get will be -1 right now. Again, if you follow the colorful line, you'll find out the input of -1 neuron is different.
 
-In the fully connected layer, these two neuron are basically doing different thing because each has its own weight. **However, when we are doing the convolution, we force these two neurons to share the same weight. Although these two are connected to different input, but there weight is the same.** This is called weight share.
+In the fully connected layer, these two neuron are basically doing different thing because each has its own weight. **However, when we are doing the convolution, we force these two neurons to share the same weight. Although these two are connected to different input, but there weight is the same.** This is called **weight share**.
 
 When we are doing this, the parameter is even lesser.
 
 <center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN13.png" width="60%"></center>
+
+#### Flatten
+What flatten layer does is transforming the feature map into a vector and then put it into a fully connected feedforward network.
+
+<center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN14.png" width="60%"></center>
+
+## What does CNN learn?
