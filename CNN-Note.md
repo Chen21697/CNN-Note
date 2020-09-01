@@ -77,7 +77,7 @@ Example above is black-and-white image. If the image is colorful which is combin
 
 <center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN9.png" width="60%"></center>
 
-**Each filter considers all three channel when it is doing the convolution(RGB), therefore, the output for each filter will also has three channels**.
+**Each filter considers all three channels(RGB) when it is doing the convolution, therefore, the output for each filter will also has three channels**.
 
 #### Max Pooling
 What max pooling does is subsampling. If we get a 4\*4 matrix from previous convolution layer, we then group the matrix by 4 parameters and then either select the maximum or calculate the average in each group.
@@ -115,5 +115,3 @@ When we are doing this, the parameter is even lesser.
 What flatten layer does is transforming the feature map into a vector and then put it into a fully connected feedforward network.
 
 <center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN14.png" width="60%"></center>
-
-## What does CNN learn?
