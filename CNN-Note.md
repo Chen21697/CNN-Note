@@ -77,4 +77,14 @@ Example above is black-and-white image. If the image is colorful which is combin
 
 <center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN9.png" width="60%"></center>
 
-Therefore, **each filter considers all three channel once(RGB)**
+**Each filter considers all three channel when it is doing the convolution(RGB), therefore, the output for each filter will also has three channels**.
+
+#### Max Pooling
+What max pooling does is subsampling. If we get a 4\*4 matrix from previous convolution layer, we then group the matrix by 4 parameters and then either select the maximum or calculate the average in each group.
+
+<center><img src="https://github.com/Chen21697/CNN-Note/blob/master/Image/CNN10.png" width="60%"></center>
+
+>Subsampling can make your image even smaller.
+
+## Correlation between Convolution and Fully Connected
+> filter is a special neuron
